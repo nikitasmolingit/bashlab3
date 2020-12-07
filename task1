@@ -1,0 +1,8 @@
+#!/bin/bash
+
+d=$(date '+%d.%m.%y_%H:%M:%S')
+r_f=~/report
+t=~/test
+site=www.net_nikogo.ru
+mkdir $t && echo "papka sozdalas uspeshno" >> $r_f && touch $t/$d
+ping -c 1 $site 2> /dev/null || echo "$d ne smogli pinganut sait" >> $r_f
