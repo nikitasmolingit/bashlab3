@@ -1,0 +1,16 @@
+#!/bin/bash
+while true; do
+read l
+echo "$l" > pipe
+if [[ "$l" == "QUIT" ]]
+then
+echo "bye bye"
+exit 1
+elif [[ ("$l" != "*") && ("$l" != "+") && !("$l" =~([0-9]+)) ]]
+then
+
+echo "oshibka"
+exit 2
+
+fi
+done
